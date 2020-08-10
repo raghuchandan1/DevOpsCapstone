@@ -36,7 +36,6 @@ pipeline {
 		}
         //stage('Security Scan') {
         //    steps {
-        //        sudo aquaMicroscanner imageName: 'alpine:latest', notCompleted: 'exit 1', onDisallowed: 'fail'
         //        sudo aquaMicroscanner imageName: "raghuchandan1/devops-capstone", notCompliesCmd: '', onDisallowed: 'ignore', outputFormat: 'html'
         //    }
         //}         
