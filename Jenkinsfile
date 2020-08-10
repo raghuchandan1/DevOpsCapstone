@@ -7,7 +7,7 @@ pipeline {
 					sh '''
 						eksctl create cluster \
 						--name capstonecluster \
-						--version 1.13 \
+						--version 1.17 \
 						--nodegroup-name standard-workers \
 						--node-type t2.small \
 						--nodes 2 \
