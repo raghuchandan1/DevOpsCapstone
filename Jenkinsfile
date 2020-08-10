@@ -9,6 +9,7 @@ pipeline {
         }
         stage('Lint Docker') {
             steps {
+                sh 'docker run hello-world'
                 sh 'docker run --rm -i hadolint/hadolint:latest < Dockerfile'
             }
         }
