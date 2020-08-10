@@ -5,9 +5,7 @@ pipeline {
 			steps {
 				withAWS(region:'us-west-2', credentials:'aws_credentials') {
 					sh '''
-						cp ./.aws/credentials ~/.aws/credentials
-						cp ./.aws/config ~/.aws/config
-						aws configure
+						aws configure set aws_access_key_id AKIAUIAZSVB5RUZL4EVX aws_secret_access_key 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 region us-west-2 output json
 						eksctl create cluster \
 						--name capstonecluster \
 						--version 1.17 \
