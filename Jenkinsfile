@@ -35,7 +35,7 @@ pipeline {
 		}
         stage('Security Scan') {
             steps { 
-                aquaMicroscanner imageName: 'devops-capstone', notCompleted: 'exit 1', onDisallowed: 'fail'
+                aquaMicroscanner imageName: 'devops-capstone', notCompilesCmd: 'exit 1', onDisallowed: 'fail'
             }
         }         
         
