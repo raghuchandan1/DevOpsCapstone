@@ -34,10 +34,10 @@ pipeline {
 			}
 		}
         stage('Security Scan') {
-              steps { 
-                 aquaMicroscanner imageName: 'devops-capstone', notCompleted: 'exit 1', onDisallowed: 'fail'
-              }
-         }         
+            steps { 
+                aquaMicroscanner imageName: 'devops-capstone', notCompleted: 'exit 1', onDisallowed: 'fail'
+            }
+        }         
         
         stage('Deploy') { 
             steps {
