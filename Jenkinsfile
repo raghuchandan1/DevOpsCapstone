@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Lint HTML') {
             steps {
-                //sh 'apt-get install tidy'
+                sh 'sudo apt-get install tidy'
                 sh 'tidy -q -e *.html'
             }
         }
