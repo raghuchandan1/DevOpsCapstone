@@ -36,7 +36,7 @@ pipeline {
 		}
         stage('Security Scan') {
             steps { 
-                sudo aquaMicroscanner imageName: 'raghuchandan1/devops-capstone', notCompliesCmd: '', onDisallowed: 'ignore', outputFormat: 'html'
+                sudo aquaMicroscanner imageName:'devops-capstone', notCompliesCmd:'', onDisallowed:'ignore', outputFormat:'html'
             }
         }         
         
