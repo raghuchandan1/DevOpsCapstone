@@ -4,6 +4,7 @@ pipeline {
 		stage('Create the cluster for Kubernetes') {
 			steps {
 				sh '''
+					aws configure
 					eksctl create cluster \
 					--name devopscluster \
 					--version 1.17 \
