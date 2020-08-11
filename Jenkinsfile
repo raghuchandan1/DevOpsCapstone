@@ -4,8 +4,8 @@ pipeline {
 		stage('Create the cluster for Kubernetes') {
 			steps {
 				sh '''
-					aws configure set aws_access_key_id AKIAUIAZSVB5SI7YBFBM	
-					aws configure set aws_secret_access_key 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	
+					aws configure set aws_access_key_id ${AWS_ACCESS_KEY}	
+					aws configure set aws_secret_access_key ${AWS_SECRET_ACCESS_KEY}	
 					aws configure set region us-west-2	
 					aws configure set output json
 					eksctl create cluster \
