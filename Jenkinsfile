@@ -9,7 +9,7 @@ pipeline {
 					aws configure set region us-west-2	
 					aws configure set output json
 					eksctl create cluster \
-					--name devopscluster \
+					--name devopscapstonecluster \
 					--version 1.17 \
 					--nodegroup-name standard-workers \
 					--node-type t2.small \
@@ -27,7 +27,7 @@ pipeline {
 			steps {
 				withAWS(region:'us-west-2', credentials:'aws_credentials') {
 					sh '''
-						aws eks --region us-west-2 update-kubeconfig --name devopscluster
+						aws eks --region us-west-2 update-kubeconfig --name devopscapstonecluster
 					'''
 				}
 			}
